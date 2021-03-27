@@ -1,10 +1,23 @@
 import React from "react";
-
+import { useRouteMatch } from "react-router";
 const Cody = () => {
-    return (
-        <div>
-          hi Cody
-        </div>
+  let match = useRouteMatch();
+  return (
+    <div>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+      <h1>Hello</h1>
+
+
+    </div>
     );
   };
   

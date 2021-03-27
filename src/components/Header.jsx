@@ -45,7 +45,7 @@ const Header = () => {
                 <Link to="/nora">Nora</Link>
               </li>
             </ul>
-            <Route path="/home">
+            {/* <Route path="/home">
               <Home />
             </Route>
             <Route path="/cody">
@@ -56,7 +56,7 @@ const Header = () => {
             </Route>
             <Route path="/nora">
               <Nora />
-            </Route>
+            </Route> */}
           </div>
       </Router>
     </AppBar>
