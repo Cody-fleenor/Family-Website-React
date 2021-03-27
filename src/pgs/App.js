@@ -1,31 +1,13 @@
 import React from "react";
-import Header from "../components/Header"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Cody from "../pgs/Cody";
-import Home from "../pgs/Home";
-import Nora from "../pgs/Nora";
-import Beck from '../pgs/Beck';
-
-
+import {BrowswerRouter as Router} from 'react-router-dom';
+import Routes from '../components/Routes';
 
 const App = () => {
   return (
   <div>
-    <Header />
-    <Router>
-      <Route path="/home">
-        <Home />
-      </Route>
-      <Route path="/cody">
-        <Cody />
-      </Route>
-      <Route path="/beck">
-        <Beck />
-      </Route>
-      <Route path="/nora">
-        <Nora />
-      </Route>
-    </Router>
+    <div>
+      <Routes />
+    </div>
   </div>
   );
 };

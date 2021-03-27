@@ -1,9 +1,11 @@
 import React from "react";
+import Profile from "../components/Profile";
+
 
 const Nora = () => {
     return (
         <div>
-          hi Nora
+          <Profile />
         </div>
     );
   };

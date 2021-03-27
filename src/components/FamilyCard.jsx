@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import CardMedia from "@material-ui/core/CardMedia";
 
 const FamilyCard = props =>{
-    const { title, urlroute, bio, imageUrl } = props;
+    const { title, bio, imageUrl } = props;
     return(
         <Card>
             <CardHeader

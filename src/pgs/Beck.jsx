@@ -1,9 +1,11 @@
 import React from "react";
+import Profile from "../components/Profile";
+
 
 const Beck = () => {
     return (
         <div>
-          hi Beck
+          <Profile />
         </div>
     );
   };
