@@ -3,15 +3,55 @@ import { AppBar } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import {Link} from "react-router-dom"
 
+const useStyles = makeStyles({
+
+  ul:{
+    listStyleType:"none",
+    display: "inline-block"
+    },
+  link: {
+    float: "left",
+    color: "white",
+    display: "block",
+    paddingLeft: 3,
+    textDecoration: "none"
+  },
+  navBarStyles:{
+    position: "static",
+    alignItems: "flex-start",
+    justify:"center",
+    padding: 0,
+    border: 0,
+    marginBottom: 10
+  }
+})
+
 const NavBar = () => {
+  const classes = useStyles();
   return (
-    <AppBar position="static" style={{alignItems: "flex-start", justify: "center", padding: 0, border: 0, marginBottom: 10}}>
+    <AppBar className={classes.navBarStyles}>
         <div>
-            <ul style={{listStyleType:"none", display: "inline-block" }}>
-              <li style={{float:"left"}}><Link to="/Home" style={{color: "white", display: "block", padding: 3, textDecoration:"none"}}>Home</Link></li>
-              <li style={{float:"left"}}><Link to="/Beck" style={{color: "white", display: "block", padding: 3, textDecoration:"none"}}>Beck</Link></li>
-              <li style={{float:"left"}}><Link to="/Cody" style={{color: "white", display: "block", padding: 3, textDecoration:"none"}}>Cody</Link></li>
-              <li style={{float:"left"}}><Link to="/Nora" style={{color: "white", display: "block", padding: 3, textDecoration:"none"}}>Nora</Link></li>
+            <ul className={classes.ul}>
+              <li className={classes.link}>
+                <Link className={classes.link} to="/Home">
+                  Home
+                </Link>
+              </li>
+              <li className={classes.link}>
+                <Link className={classes.link} to="/Beck">
+                  Beck
+                </Link>
+              </li>
+              <li className={classes.link}>
+                <Link to="/Cody" className={classes.link}>
+                  Cody
+                </Link>
+              </li>
+              <li className={classes.link}>
+                <Link to="/Nora" className={classes.link}>
+                  Nora
+                </Link>
+              </li>
           </ul>
         </div>
     </AppBar>

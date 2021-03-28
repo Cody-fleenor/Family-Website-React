@@ -8,34 +8,51 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import CardMedia from "@material-ui/core/CardMedia";
 
-
+const useStyles = makeStyles({
+    mainBody:{
+        paddingLeft: 10,
+        paddingRight: 10
+        },
+    cardHeader:{
+        textAlign: "center",
+        padding: 5
+    }
+})
 
 const Cody = () => {
+    const classes = useStyles();
     return (
-        // <div>
-        //   <Profile />
-        // </div>
-        <div>
-        <Grid container spacing={1} padding={1}>
-          <Grid item xs={12} sm={4}>
-              <Card>
-                  <CardHeader style={{height: "15px"}}
-                      title= "Cody" />
-                  <CardMedia style={{ height: "250px" }} 
-                  image="https://www.wakesmiles.org/wp-content/uploads/2018/02/female-placeholder.jpg"
-                  />
-              </Card>
-          </Grid>
-          <Grid item xs={12} sm={8}>
-              <Card>
-                  <CardContent>
-                      <Typography variant="body2" component="p">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolore labore laborum sint ipsum illum quod alias. Atque molestias placeat iusto, vel quisquam nisi eos, delectus culpa natus nostrum cum.</p>
-                      </Typography>
-                  </CardContent>
-              </Card>
-          </Grid>
-        </Grid>
+        <div className={classes.mainBody}>
+            <Grid container spacing={1} padding={1}>
+                <Grid item xs={12} sm={4}>
+                    <Card>
+                        <CardHeader className={classes.cardHeader}
+                            title={
+                                <Typography variant="h6" component="h1">
+                                    Cody
+                                </Typography>
+                                } />
+                        <CardMedia style={{ height: "250px" }} 
+                        image="https://www.clearmountainbank.com/wp-content/uploads/2020/04/male-placeholder-image.jpeg"
+                        />
+                    </Card>
+                </Grid>
+                <Grid item xs={12} sm={8}>
+                    <Card>
+                        <CardContent>
+                            <Typography variant="body2" component="p">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue vestibulum risus, non consequat massa varius consectetur.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue vestibulum risus, non consequat massa varius consectetur. 
+                                <br />
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Maecenas congue vestibulum risus, non consequat massa varius consectetur.
+                                <br />
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas congue vestibulum risus, non consequat massa varius consectetur.
+                                </p>
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            </Grid>
       </div>
     );
   };
